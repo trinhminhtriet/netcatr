@@ -1,0 +1,27 @@
+[package]
+name = "netcatr"
+version = "0.1.0"
+authors = ["Triet Trinh <contact@trinhminhtriet.com>"]
+description = "netcatr: A cross-platform port listener and reverse shell application designed for ease of use, providing seamless network connectivity."
+license = "MIT"
+homepage = "https://trinhminhtriet.com"
+repository = "https://github.com/trinhminhtriet/netcatr"
+edition = "2021"
+readme = "README.md"
+keywords = ["port listener", "reverse shell", "networking", "cross-platform", "security"]
+categories = ["command-line-utilities"]
+
+[[bin]]
+name = "netcatr"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5.9", features = ["derive"] }
+colored = "2.1.0"
+rustyline = "14.0.0"
+log = "0.4.22"
+fern = { version = "0.6.2", features = ["colored"] }
+
+[target.'cfg(unix)'.dependencies]
+termios = "0.3"
+signal-hook = "0.3.17"
