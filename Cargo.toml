@@ -8,7 +8,7 @@ homepage = "https://trinhminhtriet.com"
 repository = "https://github.com/trinhminhtriet/netcatr"
 edition = "2021"
 readme = "README.md"
-keywords = ["port listener", "reverse shell", "networking", "cross-platform", "security"]
+keywords = ["port-listener", "reverse-shell", "networking", "cross-platform", "security"]
 categories = ["command-line-utilities"]
 
 [[bin]]
