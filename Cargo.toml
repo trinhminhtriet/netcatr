@@ -18,7 +18,7 @@ path = "src/main.rs"
 [dependencies]
 clap = { version = "4.5.20", features = ["derive"] }
 colored = "2.1.0"
-rustyline = "14.0.0"
+rustyline = "15.0.0"
 log = "0.4.22"
 fern = { version = "0.7.0", features = ["colored"] }
 
