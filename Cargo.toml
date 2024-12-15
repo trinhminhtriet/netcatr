@@ -1,6 +1,6 @@
 [package]
 name = "netcatr"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["Triet Trinh <contact@trinhminhtriet.com>"]
 description = "netcatr: A cross-platform port listener and reverse shell application designed for ease of use, providing seamless network connectivity."
 license = "MIT"
