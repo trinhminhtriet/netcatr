@@ -24,7 +24,7 @@ fern = { version = "0.7.1", features = ["colored"] }
 
 [target.'cfg(unix)'.dependencies]
 termios = "0.3"
-signal-hook = "0.3.17"
+signal-hook = "0.3.18"
 
 [profile.release]
 lto = true
