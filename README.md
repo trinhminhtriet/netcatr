@@ -23,6 +23,62 @@
 - Listen mode (listen);
 - Reverse shell mode (connect);
 
+### Banner Grabber Mode (NEW!)
+Grab a banner from a single service:
+
+# Auto-detect protocol based on port
+netcatr banner 192.168.1.1 80
+
+# Specify protocol explicitly
+netcatr banner -p http 192.168.1.1 80
+
+# Grab SSH banner with verbose output
+netcatr banner -p ssh -v 192.168.1.1 22
+
+# Grab banner with custom timeout
+netcatr banner -t 10 192.168.1.1 21
+
+# Multi-port Banner Grabbing
+Scan multiple ports at once:
+
+# Scan common ports
+netcatr banner -m "21,22,23,25,53,80,110,143,443,993,995" target.com
+
+# Scan with verbose output and save to file
+netcatr banner -m "80,443,8080,8443" -v -o scan_results.txt example.com
+
+# Supported Protocols
+
+auto - Auto-detect based on port (default)
+http - HTTP banner grabbing
+https - HTTPS banner grabbing
+ftp - FTP welcome message
+ssh - SSH version string
+smtp - SMTP greeting
+telnet - Telnet banner
+raw - Raw TCP banner
+
+Banner Grabber Examples:
+
+# Basic HTTP banner grab
+netcatr banner example.com 80
+
+# HTTPS with verbose output
+netcatr banner -p https -v secure-site.com 443
+
+# FTP server identification
+netcatr banner -p ftp ftp.server.com 21
+
+# SSH version detection
+netcatr banner -p ssh server.com 22
+
+# Multi-protocol scan with output file
+netcatr banner -m "21,22,80,443" -o results.txt target.server.com
+
+# Raw banner grab with extended timeout
+netcatr banner -p raw -t 15 custom.service.com 9999
+
+
 ## 🚀 Installation
 
 To install **netcatr**, simply clone the repository and follow the instructions below:
