@@ -5,8 +5,8 @@ use clap::{Parser, Subcommand};
 pub struct Opts {
     #[clap(subcommand)]
     pub command: Command,
-    // #[clap(short, long)]
-    // verbose: bool,
+       // #[clap(short, long)]
+       // verbose: bool,
 }
 
 #[derive(Subcommand, Debug)]
@@ -31,7 +31,7 @@ pub enum Command {
         local_interactive: bool,
 
         /// Execute command when connection received
-        #[clap(short, long)] // hidden
+        #[clap(short, long)]
         exec: Option<String>,
 
         // Host:ip, IP if only 1 value provided
@@ -47,6 +47,34 @@ pub enum Command {
         shell: String,
 
         // Host:ip, IP if only 1 value provided
+        #[clap(num_args = ..=2)]
+        host: Vec<String>,
+    },
+
+    /// Grab service banner from remote host
+    #[clap(alias = "b")]
+    Banner {
+        /// Protocol to use (auto, http, https, ftp, ssh, smtp, telnet, raw)
+        #[clap(short, long, default_value = "auto")]
+        protocol: String,
+
+        /// Connection timeout in seconds
+        #[clap(short, long, default_value = "5")]
+        timeout: u64,
+
+        /// Verbose output
+        #[clap(short, long)]
+        verbose: bool,
+
+        /// Save output to file
+        #[clap(short = 'o', long)]
+        output: Option<String>,
+
+        /// Grab banners from multiple ports (comma-separated)
+        #[clap(short = 'm', long)]
+        multiple_ports: Option<String>,
+
+        // Host:port, port if only 1 value provided
         #[clap(num_args = ..=2)]
         host: Vec<String>,
     },
