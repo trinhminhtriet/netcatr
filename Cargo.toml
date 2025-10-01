@@ -19,7 +19,7 @@ path = "src/main.rs"
 clap = { version = "4.5.42", features = ["derive"] }
 colored = "2.2.0"
 rustyline = "16.0.0"
-log = "0.4.27"
+log = "0.4.28"
 fern = { version = "0.7.1", features = ["colored"] }
 
 [target.'cfg(unix)'.dependencies]
