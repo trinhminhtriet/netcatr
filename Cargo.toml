@@ -16,7 +16,7 @@ name = "netcatr"
 path = "src/main.rs"
 
 [dependencies]
-clap = { version = "4.5.51", features = ["derive"] }
+clap = { version = "4.5.56", features = ["derive"] }
 colored = "2.2.0"
 rustyline = "17.0.2"
 log = "0.4.27"
